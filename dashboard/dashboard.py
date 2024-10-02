@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-data_df = pd.read_csv("./dashboard/cleaned_data.csv")
+data_df = pd.read_csv("./data/cleaned_data.csv")
 air_quality_year = data_df.groupby("year").agg({"PM2.5": "mean", "PM10": "mean", "SO2": "mean", "NO2": "mean", "CO": "mean", "O3": "mean"})
 
 air_quality_month = data_df.groupby("month").agg({"PM2.5": "mean", "PM10": "mean", "SO2": "mean", "NO2": "mean", "CO": "mean", "O3": "mean"})
